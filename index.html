@@ -29,15 +29,24 @@
 </script>
 
 <body data-theme="dark">
-  <!-- Scroll-locked gradient -->
-
   <div class="perspective">
+    <script>
+      // Ensure Safari users get no perspective effect.
+      // This is because Safari is dogshit and doesn't support anything remotely
+      // modern. Fuck Apple, fuck iOS, and fuck all iOS users.
+      if (window.safari !== undefined) {
+        const perspective = document.querySelector("body > .perspective");
+        perspective.classList.add("apple-sucks");
+      }
+    </script>
+
     <div id="bg-bottom">
       <img src="assets/bg-bottom.svg" />
     </div>
     <img src="assets/bg-top.svg" id="bg-top" />
 
     <section id="about" class="container whole-page">
+      <!-- Scroll-locked gradient -->
       <div id="floating-background"></div>
 
       <header id="header">

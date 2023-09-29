@@ -117,17 +117,19 @@ footer {
  */
 
 .perspective {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+
+  scroll-behavior: smooth;
+}
+
+.perspective:not(.apple-sucks) {
   --perspective: 1;
   perspective: calc(var(--perspective) * 1px);
   perspective-origin: 0 0;
 
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-
   overflow-x: hidden;
   overflow-y: auto;
-
-  scroll-behavior: smooth;
 }
 
 #bg-top {
