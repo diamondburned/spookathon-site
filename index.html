@@ -1,0 +1,158 @@
+<!doctype html>
+<meta charset="utf-8" />
+
+<title>Spookathon – ACM at CSUF</title>
+<meta name="theme-color" content="#ff7100" />
+<meta property="og:title" content="Spookathon – ACM at CSUF" />
+<meta
+  property="og:description"
+  content="Spookathon is a Halloween-themed 3-hour Hackathon hosted by ACM at CSUF."
+/>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="darkreader-lock" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+/>
+<link rel="stylesheet" href="./style.css" />
+
+<script>
+  // Annoyingly initialize the actual phone device's screen height, if any.
+  // This lets us avoid the top bar on phones.
+  window.addEventListener("resize", () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+  });
+</script>
+
+<body data-theme="dark">
+  <!-- Scroll-locked gradient -->
+
+  <div class="perspective">
+    <div id="bg-bottom">
+      <img src="assets/bg-bottom.svg" />
+    </div>
+    <img src="assets/bg-top.svg" id="bg-top" />
+
+    <section id="about" class="container whole-page">
+      <div id="floating-background"></div>
+
+      <header id="header">
+        <h4>
+          ACM at <span class="halloween">CSUF</span>
+          <span style="font-weight: normal">presents:</span>
+        </h4>
+        <h1><span class="halloween">Spook</span>athon</h1>
+      </header>
+
+      <div class="intro">
+        <p>A Halloween-themed 3-hour Hackathon hosted by ACM at CSUF.</p>
+        <table>
+          <tr data-name="when">
+            <td>When</td>
+            <td>Friday, October 27<sup>th</sup> @ 3:00 PM - 6:00 PM</td>
+          </tr>
+          <tr data-name="where">
+            <td>Where</td>
+            <td>CS 300</td>
+          </tr>
+          <tr data-name="who">
+            <td>Who</td>
+            <td>
+              Everyone, but please <b><a href="#rsvp">RSVP</a></b> beforehand!
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <a id="move-down" href="#rsvp">
+        <img
+          src="https://fonts.gstatic.com/s/i/materialicons/expand_more/v14/24px.svg"
+          width="64"
+        />
+      </a>
+    </section>
+
+    <div class="perspective-buffer">
+      <section id="rsvp" class="container qrcode-promo">
+        <hgroup>
+          <h2>Be sure to <span class="halloween">RSVP</span>!</h2>
+          <a href="https://acmcsuf.com/spookathon-rsvp">
+            acmcsuf.com/spookathon-rsvp
+          </a>
+          <p>
+            While you can still attend without RSVPing, we highly recommend you
+            do so! This way, we can better prepare for the event and make sure
+            everyone has a great time.
+          </p>
+        </hgroup>
+        <a href="https://acmcsuf.com/spookathon-rsvp">
+          <img src="assets/rsvp-qr.svg" alt="RSVP QR Code" />
+        </a>
+      </section>
+
+      <section id="contact" class="container qrcode-promo">
+        <hgroup>
+          <h2>Join our <span class="halloween">Discord</span>!</h2>
+          <a href="https://acmcsuf.com/discord">acmcsuf.com/discord</a>
+        </hgroup>
+        <a href="https://acmcsuf.com/discord">
+          <img src="assets/discord-qr.svg" alt="Discord QR Code" />
+        </a>
+      </section>
+
+      <section id="faq" class="container">
+        <h2>FAQ</h2>
+        <ul>
+          <li>
+            <strong>What is a 3-hour Hackathon?</strong>
+            <br />
+            A 3-hour hackathon is a short but intense event where people come
+            together to build something cool in a short amount of time. It's a
+            great opportunity to learn new skills, collaborate with others, and
+            have some fun.
+          </li>
+          <li>
+            <strong>What should I build?</strong>
+            <br />
+            Anything you want! You can build a website, a game, a mobile app, or
+            anything else you can think of. Just make sure it's Halloween-themed
+            and reasonably scoped for 3 hours!
+          </li>
+          <li>
+            <strong>Do I need to know how to code?</strong>
+            <br />
+            Nope! You can demonstrate non-coding projects as well. For example,
+            you can use a no-code tool like Figma or Penpot to design a website!
+          </li>
+          <li>
+            <strong>What if I don't have a team?</strong>
+            <br />
+            You can work alone or with a team of any reasonable size. If you
+            don't have a team, simply find one on the spot!
+          </li>
+          <li>
+            <strong>What if I don't have an idea?</strong>
+            <br />
+            Feel free to use AI tools like
+            <a href="https://chat.openai.com/">ChatGPT</a> or
+            <a href="https://bard.google.com/">Bard</a> to generate ideas! Just
+            make sure it matches your costume!
+          </li>
+        </ul>
+      </section>
+
+      <footer class="container">
+        <span>
+          Made by
+          <a href="https://libdb.so">diamondburned</a> and
+          <a href="https://acmcsuf.com">ACM at CSUF</a> with ❤️
+        </span>
+        <span>
+          Source code on <a href="https://libdb.so/spookathon-site">GitHub</a>
+        </span>
+      </footer>
+    </div>
+  </div>
+</body>
