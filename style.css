@@ -154,6 +154,8 @@ hgroup > *:not(:first-child) {
   transform: translateX(1000%) translateZ(calc(var(--z-translate) * 1px))
     scale(calc((var(--perspective) - var(--z-translate)) / var(--perspective)));
   transform-origin: 0 0;
+
+  pointer-events: none;
 }
 
 #bg-bottom {
@@ -173,6 +175,7 @@ hgroup > *:not(:first-child) {
   transform-origin: 0 0;
 
   overflow: clip;
+  pointer-events: none;
 }
 
 #bg-bottom img {
