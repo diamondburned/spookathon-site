@@ -70,20 +70,24 @@ h3 {
 
 ul,
 ol,
-li {
+ul li,
+ol li {
   list-style: none;
   padding: 0;
 }
 
-li {
+ul li,
+ol li {
   margin-bottom: 1em;
 }
 
-li::before {
+ul li::before,
+ol li::before {
   content: "";
 }
 
-li strong {
+ul li strong,
+ol li strong {
   line-height: 2;
   font-size: 1.1em;
 }
@@ -282,7 +286,7 @@ section.qrcode-promo > *:not(:first-child) {
 }
 
 #about h1 {
-  font-size: clamp(2rem, 10vw, 6rem);
+  font-size: clamp(2.5rem, 10vw, 6rem);
 }
 
 #about header,
@@ -292,10 +296,6 @@ section.qrcode-promo > *:not(:first-child) {
 
 #about .intro {
   font-size: 1.1em;
-}
-
-#about .intro p {
-  padding: 0 calc(var(--spacing) / 2);
 }
 
 #about table {
