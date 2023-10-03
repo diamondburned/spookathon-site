@@ -414,6 +414,8 @@ div.content > section h2 {
   margin: 0;
 
   transition: background-color 200ms ease-in-out;
+
+  transform-style: flat; /* required for sticky positioning?? */
 }
 
 #toc nav {
