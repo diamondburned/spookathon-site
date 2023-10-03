@@ -250,6 +250,11 @@ section h2 {
   margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
 }
 
+section h2 a[href^="#"] {
+  color: inherit;
+  text-decoration: none;
+}
+
 section.qrcode-promo {
   display: flex;
   flex-direction: column;
