@@ -30,7 +30,7 @@
 
 <body data-theme="dark">
   <div class="perspective">
-    <script>
+    <script async>
       // Ensure Safari users get no perspective effect.
       // This is because Safari is dogshit and doesn't support anything remotely
       // modern. Fuck Apple, fuck iOS, and fuck all iOS users.
@@ -89,7 +89,38 @@
       </a>
     </section>
 
-    <div class="perspective-buffer">
+    <div class="perspective-buffer content">
+      <section id="toc">
+        <nav>
+          <h4>
+            <a href="#toc">
+              <span class="expand-more material-icons">menu</span>
+              Spookathon
+            </a>
+          </h4>
+          <ol>
+            <li><a href="#rsvp">RSVP</a></li>
+            <li><a href="#scoring">Scoring Criteria</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#judges">Judges</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ol>
+        </nav>
+
+        <script async>
+          const toc = document.getElementById("toc");
+          const tocLink = document.querySelector("#toc h4 a");
+          tocLink.addEventListener("click", (e) => {
+            if (toc.matches(":target")) {
+              // If the TOC is already open, close it.
+              e.preventDefault();
+              window.location.hash = "";
+            }
+          });
+        </script>
+      </section>
+
       <!-- Scroll anchor -->
       <div id="content"></div>
 
@@ -206,7 +237,7 @@
               viewBox="-50 -50 1200 1200"
             />
             <strong>Daniel</strong>
-            <span class="role acm-general">ACM Vice President</span>
+            <span class="role acm-general">Vice President</span>
           </li>
           <li>
             <img
@@ -215,25 +246,7 @@
               src="assets/acm-aaron.webp"
             />
             <strong>Aaron</strong>
-            <span class="role acm-general">ACM Advisor</span>
-          </li>
-          <li>
-            <img
-              class="board-avatar acm-dev"
-              alt="Diamond"
-              src="assets/acm-diamond.webp"
-            />
-            <strong>Diamond</strong>
-            <span class="role acm-dev">ACM Dev Team Lead</span>
-          </li>
-          <li>
-            <img
-              class="board-avatar acm-ai"
-              alt="ACM AI Logo"
-              src="assets/acm-ashley.webp"
-            />
-            <strong>Ashley</strong>
-            <span class="role acm-ai">ACM AI Team Lead</span>
+            <span class="role acm-general">Advisor</span>
           </li>
           <li>
             <img
@@ -242,7 +255,25 @@
               src="assets/acm-alan.webp"
             />
             <strong>Alan</strong>
-            <span class="role acm-design">ACM Design Team Lead</span>
+            <span class="role acm-design">Design Team Lead</span>
+          </li>
+          <li>
+            <img
+              class="board-avatar acm-dev"
+              alt="Diamond"
+              src="assets/acm-diamond.webp"
+            />
+            <strong>Diamond</strong>
+            <span class="role acm-dev">Dev Team Lead</span>
+          </li>
+          <li>
+            <img
+              class="board-avatar acm-ai"
+              alt="ACM AI Logo"
+              src="assets/acm-ashley.webp"
+            />
+            <strong>Ashley</strong>
+            <span class="role acm-ai">AI Team Lead</span>
           </li>
         </ul>
       </section>
