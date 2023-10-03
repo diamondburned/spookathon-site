@@ -246,8 +246,8 @@ span.halloween {
 }
 
 section h2 {
-  margin-top: calc(var(--typography-spacing-vertical) * 1.5);
-  margin-bottom: calc(var(--typography-spacing-vertical) * 0.5);
+  margin: 0;
+  margin-bottom: var(--spacing);
 }
 
 section h2 a[href^="#"] {
@@ -338,12 +338,7 @@ section.qrcode-promo > *:not(:first-child) {
   display: flex;
   flex-direction: column;
 
-  gap: calc(var(--block-spacing-vertical) * 2);
-}
-
-#about + div > *:first-child {
-  /* Allow anchor links to properly snap to this section */
-  padding-top: calc(var(--block-spacing-vertical) * 2);
+  gap: calc(var(--block-spacing-vertical) * 2.5);
 }
 
 #about + div > section {
