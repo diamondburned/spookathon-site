@@ -176,6 +176,7 @@ footer {
 
 .perspective-buffer {
   z-index: 5;
+  transform-style: preserve-3d;
 }
 
 #bg-top {
@@ -192,6 +193,7 @@ footer {
   transform: translateX(1000%) translateZ(calc(var(--z-translate) * 1px))
     scale(calc((var(--perspective) - var(--z-translate)) / var(--perspective)));
   transform-origin: 0 0;
+  transform-style: preserve-3d;
 
   pointer-events: none;
 }
@@ -211,6 +213,7 @@ footer {
   transform: translateZ(calc(var(--z-translate) * 1px))
     scale(calc((var(--perspective) - var(--z-translate)) / var(--perspective)));
   transform-origin: 0 0;
+  transform-style: preserve-3d;
 
   overflow: clip;
   pointer-events: none;
