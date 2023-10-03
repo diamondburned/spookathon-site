@@ -414,6 +414,10 @@ div.content > section h2 {
   margin: 0 auto;
 }
 
+#toc nav h4 {
+  pointer-events: none; /* forbid clicking */
+}
+
 #toc nav h4 .expand-more {
   font-size: 0;
 }
@@ -471,6 +475,10 @@ div.content > section h2 {
   #toc nav a {
     width: 100%;
     text-align: center;
+  }
+
+  #toc nav h4 {
+    pointer-events: auto;
   }
 
   #toc nav h4 .expand-more {
