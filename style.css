@@ -299,7 +299,8 @@ section.qrcode-promo > *:not(:first-child) {
 }
 
 #about table {
-  width: max-content;
+  width: 100%;
+  max-width: max-content;
   box-shadow: 0 0 32px -12px rgba(0, 0, 0, 0.35);
 }
 
