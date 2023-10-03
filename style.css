@@ -68,12 +68,6 @@ h3 {
   font-size: 2em;
 }
 
-@media (min-width: 576px) {
-  h1 {
-    font-size: 4.5em;
-  }
-}
-
 ul,
 ol,
 li {
@@ -285,6 +279,10 @@ section.qrcode-promo > *:not(:first-child) {
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+#about h1 {
+  font-size: clamp(2rem, 10vw, 6rem);
 }
 
 #about header,
