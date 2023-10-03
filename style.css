@@ -88,8 +88,8 @@ ol li::before {
 
 ul li strong,
 ol li strong {
-  line-height: 2;
-  font-size: 1.1em;
+  line-height: 1.5;
+  font-size: 1.15em;
 }
 
 footer {
@@ -186,7 +186,7 @@ footer {
   --z-translate: -1;
 
   z-index: -1;
-  opacity: 0.75;
+  opacity: 1;
 
   position: absolute;
   top: 0;
@@ -245,6 +245,15 @@ span.halloween {
   justify-content: center;
 }
 
+section + div.container {
+  max-width: 400px;
+}
+
+section + div.container > hr {
+  margin: 0 calc(var(--spacing) / 4);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.15);
+}
+
 section h2 {
   margin: 0;
   margin-bottom: var(--spacing);
@@ -263,7 +272,8 @@ section.qrcode-promo {
   align-items: center;
   text-align: center;
 
-  width: min(100%, 600px);
+  width: 100%;
+  max-width: 600px;
 }
 
 section.qrcode-promo > h2 {
@@ -292,6 +302,7 @@ section.qrcode-promo > *:not(:first-child) {
 
 #about h1 {
   font-size: clamp(2.5rem, 10vw, 6rem);
+  line-height: 1;
 }
 
 #about header,
@@ -307,12 +318,12 @@ section.qrcode-promo > *:not(:first-child) {
   width: 100%;
   max-width: max-content;
   box-shadow: 0 0 32px -12px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
 }
 
 #about table td {
   padding: calc(var(--spacing) / 2) calc(var(--spacing) / 1.5);
   border-bottom: 0;
-  backdrop-filter: blur(6px);
 }
 
 #about table td:nth-child(1) {
@@ -412,6 +423,15 @@ section.qrcode-promo > *:not(:first-child) {
   flex-direction: column;
 }
 
+#scoring ul li strong {
+  display: flex;
+}
+
+#scoring span.weight {
+  margin-left: auto;
+  padding: 0 calc(var(--spacing) / 2);
+}
+
 #scoring .tip::before {
   content: "💡";
   margin: 0 calc(var(--spacing) / 4);
@@ -421,6 +441,12 @@ section.qrcode-promo > *:not(:first-child) {
   --1st-place: #f0c674;
   --2nd-place: #c5c8c6;
   --3rd-place: #de935f;
+}
+
+#prizes ol {
+  width: 100%;
+  max-width: max-content;
+  margin: auto;
 }
 
 #prizes ol li:nth-child(1) strong {
@@ -458,6 +484,68 @@ section.qrcode-promo > *:not(:first-child) {
 #prizes ol li ul li::before {
   content: "•";
   margin-right: calc(var(--spacing) / 2);
+}
+
+#judges {
+  max-width: 950px;
+  padding: 0 var(--block-spacing-horizontal);
+}
+
+#judges ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: calc(var(--block-spacing-vertical));
+  margin-top: calc(var(--block-spacing-vertical));
+  margin-bottom: calc(var(--block-spacing-vertical));
+
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+#judges img.board-avatar {
+  width: min(225px, 50vw);
+  margin-bottom: calc(var(--spacing) / 2);
+}
+
+#judges ul li {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  text-align: center;
+
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+#judges .acm-general {
+  color: rgb(5, 163, 255);
+}
+
+#judges .acm-ai {
+  color: rgb(53, 231, 146);
+}
+
+#judges .acm-algo {
+  color: rgb(157, 53, 231);
+}
+
+#judges .acm-design {
+  color: rgb(255, 67, 101);
+}
+
+#judges .acm-dev {
+  color: rgb(30, 108, 255);
+}
+
+#judges .acm-gamedev {
+  color: rgb(212, 17, 83);
+}
+
+#judges .acm-oss {
+  color: rgb(17, 212, 177);
 }
 
 #faq h2 {
