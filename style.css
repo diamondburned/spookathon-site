@@ -322,7 +322,7 @@ section.qrcode-promo > *:not(:first-child) {
 }
 
 #about h1 {
-  font-size: clamp(2.5rem, 10vw, 6rem);
+  font-size: clamp(3em, 10vw, 6em);
   line-height: 1;
 }
 
