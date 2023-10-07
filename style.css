@@ -444,6 +444,10 @@ div.content > section h2 {
   text-align: center;
 }
 
+div.content > section:target h2 {
+  text-decoration: underline;
+}
+
 #move-down {
   filter: invert(1);
 
