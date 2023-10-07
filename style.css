@@ -179,23 +179,80 @@ footer {
   transform-style: preserve-3d;
 }
 
-#bg-top {
-  --z-translate: -16;
+#bg-top-bat1,
+#bg-top-bat2,
+#bg-top-moon {
+  --x-translate: 0%;
+  --y-translate: 0%;
+  --z-translate: 0;
 
   z-index: -1;
-  opacity: 0.5;
 
   position: absolute;
   top: 0;
-  right: 0;
-  width: 60%;
+  right: calc(var(--z-translate) * (95% - var(--width)));
+  width: var(--width);
 
-  transform: translateX(1000%) translateZ(calc(var(--z-translate) * 1px))
+  transform: translateZ(calc(var(--z-translate) * 1px))
     scale(calc((var(--perspective) - var(--z-translate)) / var(--perspective)));
   transform-origin: 0 0;
   transform-style: preserve-3d;
 
   pointer-events: none;
+}
+
+#bg-top-moon {
+  --x-translate: 1000%;
+  --z-translate: -16;
+  --width: min(60%, 1000px);
+
+  opacity: 0.85;
+  filter: drop-shadow(0 0 5vw rgba(255, 255, 255, 0.35));
+}
+
+#bg-top-bat1,
+#bg-top-bat2 {
+  --x-translate: 200%;
+  --z-translate: -4;
+  --width: min(60%, 800px);
+
+  opacity: 0.55;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+#bg-top-bat1 {
+  animation-name: bat1;
+}
+
+#bg-top-bat2 {
+  animation-name: bat2;
+  top: -350px;
+}
+
+@keyframes bat1 {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes bat2 {
+  0% {
+    top: -350px;
+  }
+  50% {
+    top: -150px;
+  }
+  100% {
+    top: -350px;
+  }
 }
 
 #bg-bottom {
