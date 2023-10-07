@@ -428,6 +428,10 @@ section.qrcode-promo > *:not(:first-child) {
   flex-direction: column;
 }
 
+div.content {
+  transform-style: flat; /* required for sticky positioning?? */
+}
+
 div.content > section {
   padding-top: calc(var(--block-spacing-vertical));
   padding-bottom: calc(var(--block-spacing-vertical));
@@ -471,8 +475,6 @@ div.content > section h2 {
   margin: 0;
 
   transition: background-color 200ms ease-in-out;
-
-  transform-style: flat; /* required for sticky positioning?? */
 }
 
 #toc nav {
